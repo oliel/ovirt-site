@@ -153,9 +153,8 @@
             - statuses.push(status_title)
 
             - selected = "/#{@feature_base}/#{cat}/#{feature}/".squeeze('/') == "/#{current_page.url}/".squeeze('/')
-            - classes = "#{selected ? 'selected' : ''} status-#{status.downcase}"
 
-            %li{class: classes}
+            %li
               %a{href: "#{@feature_base}/#{cat}/#{feature}".squeeze('/'), title: "Status: #{status}"}= clean_title feature_title
               = info ? "" : "NO DATA"
 
